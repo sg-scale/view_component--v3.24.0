@@ -111,7 +111,7 @@ jobs:
         RUBY_VERSION: ${{ matrix.ruby_version }}
         CAPTURE_PATCH_ENABLED: ${{ matrix.mode == 'capture_patch_enabled' && 'true' || 'false' }}
     - name: Upload coverage results
-      uses: actions/upload-artifact@v4.4.0
+      uses: actions/upload-artifact@v7.0.2
       if: always()
       with:
         name: simplecov-resultset-rails${{matrix.rails_version}}-ruby${{matrix.ruby_version}}-${{matrix.mode}}
