@@ -12,7 +12,7 @@ jobs:
     env:
       BUNDLE_GEMFILE: gemfiles/rails_8.0.gemfile
     steps:
-    - uses: actions/checkout@v4.1.1
+    - uses: actions/checkout@v7
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -92,7 +92,7 @@ jobs:
     env:
       BUNDLE_GEMFILE: gemfiles/rails_${{ matrix.rails_version }}.gemfile
     steps:
-    - uses: actions/checkout@v4.1.1
+    - uses: actions/checkout@v7
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -121,7 +121,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4.1.1
+    - uses: actions/checkout@v7
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
